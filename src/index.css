@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root{
+  margin: 32px auto;
+  max-width: 600px;
+  min-height: 500px;
+  padding: 32px;
+  border-radius: 5px;
+  background-color: #ffffff
+}
+.app{
+  max-width: 550px;
+  min-height: 400px;
+  box-shadow: #F7F7FF;
+
+}
+.app .header{
+  max-width: 460px;
+  background-color: #131112;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding:8px ;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  left: 16px;
+}
+.app .todo{
+  margin-top: 32px;
+  position: relative;
+  left: 20px;
+}
+.todo .form{
+  max-width: 450px;
+}
+.todo .form input{
+  font-size: 24px;
+  border: none;
+  outline: none;
+  min-height: 30px;
+  width: 340px;
+  border-bottom: 2px solid black;
+
+}.todo .form .add{
+  width: 106px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #131112;
+  color: white;
+  font-size: 24px;
+  position: relative;
+  bottom: -2px;
+  left: -0.2px;
+}
+.todo .tasks{
+  position: relative;
+  top: 32px;
+}
+.todo .tasks .lists{
+  display: flex;
+  min-height: 40px;
+  max-width: 450px;
+  border: 2px solid black ;
+  list-style-type: none;
+  color:white;
+  background-color: #131112;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}.app .todo .tasks .lists label{
+  position: relative;
+  width: 60%;
+  padding: 8px;
+  font-size: 20px;
+  min-height: 40px;
+  word-wrap: break-word;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}.app .todo .tasks .lists .icons{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 32px;
+  position: relative;
+  left: 48px;
+}
+.app .todo .tasks .lists .icons .delete:hover{
+  cursor: pointer;
+  color: #d00000;
+}.app .todo .tasks .lists .icons .edit:hover{
+  cursor: pointer;
+  color: #a7c957;
+}
+.todo .form .add:hover{
+  color:#219ebc;
+}
+
+
+  
+@media screen and (max-width:520px) {
+  #root{
+    margin-left: -32px;
+  }
+  .todo .form input[type="text"]{
+    width: 300px;
+  }
+}
+
+
+@media screen and (max-width:450px) {
+  #root{
+    margin-left: -32px;
+  }
+  .app .todo .form input[type="text"]{
+    width: 230px;
+  } .app .todo .form .add{
+    width: 90px;
+  }
+}
+
+@media screen and (max-width:360px) {
+    .todo .tasks{
+      width: 250px;
+    }
+    .app .todo .tasks .lists .icons{
+      position: relative;
+      left: -12px;
+    }
+  .app .todo .form input[type="text"]{
+    width: 180px;
+  }.app .todo .form .add{
+    width: 60px;
+  }
+}
